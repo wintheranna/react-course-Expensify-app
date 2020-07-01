@@ -30,10 +30,22 @@ export const startAddExpense = (expenseData = {}) => {
 //REMOVE_EXPENSE
 export const removeExpense = ({id} = {}) => ({
     type: 'REMOVE_EXPENSE',
-    expense: {
-        id
-    }
+    id
 });
+
+//START_REMOVE_EXPENSE
+export const startRemoveExpense = ({id} ={}) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).remove().then(() => {
+            dispatch(removeExpense({id})); 
+            });
+    };     
+};
+
+//create startremoveexpense 
+//test startremoveexpense with "should remove expenses from firebse"
+//use startremoveexpense in editexpensepage insted of remove expense
+//adjust editexpensepage test
     
 //EDIT EXPENSE
 export const editExpense = (id, updates) => ({
