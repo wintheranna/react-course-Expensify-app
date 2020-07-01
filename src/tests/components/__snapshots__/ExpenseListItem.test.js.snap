@@ -3,7 +3,7 @@
 exports[`should render ExpenseListItem with expenses 1`] = `
 <div>
   <Link
-    to="/edit/123abc"
+    to="/edit/1"
   >
     <h3>
       Gum

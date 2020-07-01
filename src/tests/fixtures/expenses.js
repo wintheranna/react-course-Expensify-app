@@ -1,13 +1,13 @@
 import moment from 'moment';
 
 export default [{
-    id: '123abc',
+    id: '1',
     amount: 195,
     description: 'Gum',
     note: '',
     createdAt: 0
 }, {
-    id: '567',
+    id: '2',
     amount: 14500,
     description: 'Rent',
     note: '',
